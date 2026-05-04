@@ -72,7 +72,7 @@ const FeaturesSecondary = () => {
             Premios y Reconocimientos
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-foreground leading-[1.1] text-balance">
-            Nuestras hamburguesas vegetarianas están{" "}
+            Nuestros burritos proteicos a domicilio están{" "}
             <em className="italic text-primary">espectaculares</em>
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto text-base md:text-lg leading-relaxed">
