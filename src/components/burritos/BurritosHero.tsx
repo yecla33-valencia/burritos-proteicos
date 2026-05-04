@@ -7,7 +7,7 @@ const BurritosHero = () => {
       <div className="w-full px-4 sm:px-6 md:px-12 lg:px-20 grid md:grid-cols-2 gap-0 items-center relative z-10">
         <div className="space-y-6 sm:space-y-8 pt-28 py-16 sm:py-20 md:py-0 md:pt-28 animate-fade-in-up">
           <span className="inline-flex flex-col items-start px-4 sm:px-5 py-2 sm:py-2.5 glass border border-border/60 rounded-full text-[10px] sm:text-[11px] font-medium text-muted-foreground tracking-[0.28em] uppercase shadow-sm">
-            <span>BURRITOS PROTEIN</span>
+            <span>BURRITOS-PROTEICOS</span>
             <span className="font-semibold text-xs sm:text-sm normal-case tracking-tight text-foreground font-display">by Yecla 33</span>
           </span>
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.05] text-foreground text-balance">
