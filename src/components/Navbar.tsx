@@ -72,6 +72,7 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
+              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className={`block py-3 px-4 rounded-xl font-medium transition-colors ${
                 link.active
                   ? "bg-white/20 text-white"
