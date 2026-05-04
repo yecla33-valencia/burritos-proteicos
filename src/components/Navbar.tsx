@@ -17,7 +17,7 @@ const Navbar = () => {
     { label: "Nosotros", href: "#nosotros", active: false },
     { label: "Carta", href: "#menu", active: false },
     { label: "Valores nutricionales", href: "#valores-nutricionales", active: false },
-    { label: "Alérgenos", href: "#alergenos", active: false },
+    { label: "Alérgenos", href: "/carta-alergenos.pdf", active: false, external: true },
     { label: "Contacto", href: "#contacto", active: false },
   ];
 
