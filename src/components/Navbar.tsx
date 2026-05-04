@@ -17,7 +17,7 @@ const Navbar = () => {
     { label: "Nosotros", href: "#nosotros", active: false },
     { label: "Carta", href: "#menu", active: false },
     { label: "Valores nutricionales", href: "#valores-nutricionales", active: false },
-    { label: "Alérgenos", href: "#alergenos", active: false },
+    { label: "Alérgenos", href: "/carta-alergenos.pdf", active: false, external: true },
     { label: "Contacto", href: "#contacto", active: false },
   ];
 
@@ -42,6 +42,7 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
+              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className={`relative text-base lg:text-[1.3125rem] font-medium tracking-tight px-4 lg:px-5 py-2 lg:py-2.5 rounded-full transition-all duration-300 ${
                 link.active
                   ? "bg-white/20 text-white"
@@ -71,6 +72,7 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
+              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className={`block py-3 px-4 rounded-xl font-medium transition-colors ${
                 link.active
                   ? "bg-white/20 text-white"
