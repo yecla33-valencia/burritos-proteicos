@@ -39,7 +39,7 @@ const BurritosFeatures = () => {
             Por qué elegirnos
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-foreground leading-[1.1] text-balance">
-            Burritos mejicanos proteicos a domicilio en Valencia
+            Burritos mejicanos a domicilio en Valencia
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto text-base md:text-lg leading-relaxed">
             Comida mexicana alta en proteínas, compatible con tus objetivos fitness.
