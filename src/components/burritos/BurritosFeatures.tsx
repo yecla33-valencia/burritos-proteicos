@@ -16,7 +16,7 @@ const features: Feature[] = [
   {
     icon: Wheat,
     title: "Tortilla de trigo",
-    list: ["Alta densidad nutricional", "Tamaño generoso", "Receta mejicana auténtica"],
+    list: ["Alta densidad nutricional", "Tamaño generoso. Más de 450 grs cada burrito", "Receta mejicana auténtica"],
   },
   {
     icon: Flame,
