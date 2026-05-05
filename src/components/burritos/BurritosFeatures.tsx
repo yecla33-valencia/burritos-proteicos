@@ -25,7 +25,7 @@ const features: Feature[] = [
   },
   {
     icon: SprayCan,
-    title: "Salsa Zero azúcar",
+    title: "Nativos en comida para llevar desde 1986",
     list: ["Salsa propia para burritos", "Pico de gallo fresco", "Sour cream y queso fundido"],
   },
 ];
