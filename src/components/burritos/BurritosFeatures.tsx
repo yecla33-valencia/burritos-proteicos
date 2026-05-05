@@ -42,7 +42,7 @@ const BurritosFeatures = () => {
             Burritos mejicanos proteicos en Valencia
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto text-base md:text-lg leading-relaxed">
-            Comida mexicana alta en proteínas, pensada para tu estilo de vida.
+            Comida mexicana alta en proteínas, compatible con tus objetivos fitness.
           </p>
         </div>
 
