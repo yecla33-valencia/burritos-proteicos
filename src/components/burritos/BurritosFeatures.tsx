@@ -52,9 +52,6 @@ const BurritosFeatures = () => {
               key={feature.title}
               className="group bg-gradient-card rounded-3xl p-8 text-center space-y-4 border border-border/50 shadow-soft hover-lift transition-smooth"
             >
-              <div className="w-16 h-16 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center transition-all duration-500 group-hover:bg-primary group-hover:scale-110 group-hover:rotate-3">
-                <feature.icon className="w-7 h-7 text-primary transition-colors duration-500 group-hover:text-primary-foreground" />
-              </div>
               <h3 className="font-display text-xl font-semibold text-foreground tracking-tight">
                 {feature.title}
               </h3>
