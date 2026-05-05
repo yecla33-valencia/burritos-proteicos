@@ -47,9 +47,6 @@ const BurritosMenu = () => {
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-foreground leading-[1.1] text-balance">
             5 burritos proteicos diferentes en el menú
           </h2>
-          <p className="text-muted-foreground max-w-md mx-auto text-base md:text-lg leading-relaxed">
-            Comida mexicana alta en proteínas. Cada burrito está pensado para sorprenderte.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
