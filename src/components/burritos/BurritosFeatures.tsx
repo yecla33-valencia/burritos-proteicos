@@ -11,7 +11,7 @@ const features: Feature[] = [
   {
     icon: Drumstick,
     title: "Alto en proteínas",
-    list: ["Huevos revueltos en lugar de arroz", "Carnes de calidad", "Ideal para tus macros"],
+    list: ["Huevos revueltos en lugar de arroz", "Carnes cocinadas de forma tradicional", "Ideal para tus macros"],
   },
   {
     icon: Wheat,
