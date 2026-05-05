@@ -25,7 +25,7 @@ const features: Feature[] = [
   },
   {
     icon: SprayCan,
-    title: "Somos Nativos en comida para llevar",
+    title: "Somos nativos en comida para llevar",
     list: ["Estamos especializados en Take away y Delivery desde 1986", "Tenemos flota de repartidores propia", "Atención telefónica personal para resolución de incidencias"],
   },
 ];
