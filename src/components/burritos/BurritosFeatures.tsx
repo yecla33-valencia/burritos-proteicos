@@ -10,7 +10,7 @@ type Feature = {
 const features: Feature[] = [
   {
     icon: Drumstick,
-    title: "Alto en proteínas",
+    title: "Burritos altos en proteínas",
     list: ["Huevos revueltos en lugar de arroz", "Carnes cocinadas de forma tradicional", "Salsas zero azúcar añadido"],
   },
   {
