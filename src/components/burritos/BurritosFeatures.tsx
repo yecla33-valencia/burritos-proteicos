@@ -26,7 +26,7 @@ const features: Feature[] = [
   {
     icon: SprayCan,
     title: "Nativos en comida para llevar desde 1986",
-    list: ["Salsa propia para burritos", "Pico de gallo fresco", "Sour cream y queso fundido"],
+    list: ["No somos un restaurante que lleva sus platos a domicilio", "Pico de gallo fresco", "Sour cream y queso fundido"],
   },
 ];
 
