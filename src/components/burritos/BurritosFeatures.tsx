@@ -16,7 +16,7 @@ const features: Feature[] = [
   {
     icon: Wheat,
     title: "Compatibles con tus objetivos deportivos",
-    list: ["Alta densidad nutricional", "Tamaño generoso. Más de 450 grs cada burrito", "Receta mejicana auténtica"],
+    list: ["Alta densidad nutricional", "Tamaño generoso. Más de 450 grs cada burrito", "Info de los Macros de cada burrito"],
   },
   {
     icon: Flame,
