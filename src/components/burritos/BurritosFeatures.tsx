@@ -16,7 +16,7 @@ const features: Feature[] = [
   {
     icon: Wheat,
     title: "Tortilla de trigo",
-    list: ["Envueltos al momento", "Tamaño generoso", "Receta mejicana auténtica"],
+    list: ["Alta densidad nutricional", "Tamaño generoso", "Receta mejicana auténtica"],
   },
   {
     icon: Flame,
