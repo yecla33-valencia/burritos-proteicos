@@ -21,7 +21,7 @@ const features: Feature[] = [
   {
     icon: Flame,
     title: "5 burritos a elegir",
-    list: ["Burger", "California", "Carnitas", "San Francisco", "Trufado"],
+    list: ["Son saciantes pero no son pesados", "Incluyen verduras frescas de proximidad", "Formato en Bowl para rebajar carbs"],
   },
   {
     icon: SprayCan,
