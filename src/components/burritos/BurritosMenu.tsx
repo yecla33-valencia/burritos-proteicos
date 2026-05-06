@@ -5,6 +5,12 @@ const products = [
     image: "https://yecla33.com/wp-content/uploads/2024/12/xburrito_partido-400x300.jpg.pagespeed.ic.mGDdGmm3aX.webp",
     description:
       "Huevos revueltos, carne de hamburguesa con queso cheddar y bacon, salsa zero, pico de gallo, lechuga, sour cream y queso fundido. Envuelto en tortilla de trigo.",
+    nutrition: {
+      calorias: "~1050 kcal",
+      proteinas: "~69 g",
+      carbohidratos: "~47 g",
+      grasas: "~65 g",
+    },
   },
   {
     name: "Burrito Proteico California",
@@ -12,6 +18,12 @@ const products = [
     image: "https://yecla33.com/wp-content/uploads/2024/12/xburrito_pollo-400x300.jpg.pagespeed.ic.CWY72rOfHI.webp",
     description:
       "Huevos revueltos, pollo al grill, salsa zero, pico de gallo (tomate, cebolla morada, jalapeño y lima), lechuga, sour cream y queso fundido. Sustituimos el arroz por huevos revueltos proteicos.",
+    nutrition: {
+      calorias: "~820 kcal",
+      proteinas: "~73 g",
+      carbohidratos: "~45 g",
+      grasas: "~38 g",
+    },
   },
   {
     name: "Burrito Proteico Carnitas",
@@ -19,6 +31,12 @@ const products = [
     image: "https://yecla33.com/wp-content/uploads/2024/12/xburrito_partido-400x300.jpg.pagespeed.ic.mGDdGmm3aX.webp",
     description:
       "Huevos revueltos, costillar a la barbacoa deshebrado, salsa zero, pico de gallo, lechuga, sour cream y queso fundido. Envuelto en tortilla de trigo.",
+    nutrition: {
+      calorias: "~950 kcal",
+      proteinas: "~65 g",
+      carbohidratos: "~50 g",
+      grasas: "~55 g",
+    },
   },
   {
     name: "Burrito Proteico San Francisco",
@@ -26,6 +44,12 @@ const products = [
     image: "https://yecla33.com/wp-content/uploads/2024/12/xburrito_partido-400x300.jpg.pagespeed.ic.mGDdGmm3aX.webp",
     description:
       "Huevos revueltos, chilli con carne de elaboración propia, salsa zero, pico de gallo, lechuga, sour cream y queso fundido. Para los que les gusta picantito.",
+    nutrition: {
+      calorias: "~880 kcal",
+      proteinas: "~60 g",
+      carbohidratos: "~55 g",
+      grasas: "~45 g",
+    },
   },
   {
     name: "Protein Trufado",
@@ -33,6 +57,12 @@ const products = [
     image: "https://yecla33.com/wp-content/uploads/2024/12/xburrito_trufado_partido-400x300.jpg.pagespeed.ic.qGHmFujoo7.webp",
     description:
       "Huevos revueltos, chilli con carne de elaboración propia, trufa mayo, salsa zero, pico de gallo, lechuga, sour cream y queso fundido. Para los amantes de la trufa.",
+    nutrition: {
+      calorias: "~1050 kcal",
+      proteinas: "~60 g",
+      carbohidratos: "~50 g",
+      grasas: "~70 g",
+    },
   },
 ];
 
@@ -76,6 +106,17 @@ const BurritosMenu = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {product.description}
                 </p>
+                <div className="mt-auto pt-4 border-t border-border/50">
+                  <p className="text-xs font-semibold tracking-[0.15em] uppercase text-primary mb-2">
+                    Valores nutricionales
+                  </p>
+                  <ul className="text-muted-foreground text-sm leading-relaxed space-y-1">
+                    <li><span className="font-medium text-foreground">Calorías:</span> {product.nutrition.calorias}</li>
+                    <li><span className="font-medium text-foreground">Proteínas:</span> {product.nutrition.proteinas}</li>
+                    <li><span className="font-medium text-foreground">Carbohidratos:</span> {product.nutrition.carbohidratos}</li>
+                    <li><span className="font-medium text-foreground">Grasas:</span> {product.nutrition.grasas}</li>
+                  </ul>
+                </div>
               </div>
             </article>
           ))}
