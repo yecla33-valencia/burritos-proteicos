@@ -1,13 +1,4 @@
-import { useRef } from "react";
 import { Trophy, Sparkles } from "lucide-react";
-import Autoplay from "embla-carousel-autoplay";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import award2018 from "@/assets/award-2018.jpg";
 import award2019 from "@/assets/award-2019.jpg";
 import award2021 from "@/assets/award-2021.jpg";
@@ -57,9 +48,6 @@ const awards: Award[] = [
 ];
 
 const FeaturesSecondary = () => {
-  const autoplay = useRef(
-    Autoplay({ delay: 3500, stopOnInteraction: false, stopOnMouseEnter: true })
-  );
   return (
     <section className="py-20 md:py-24 bg-gradient-warm relative overflow-hidden">
       <div className="absolute -top-32 left-1/4 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
@@ -80,53 +68,42 @@ const FeaturesSecondary = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto px-2 sm:px-4 md:px-12">
-          <Carousel
-            opts={{ align: "start", loop: true }}
-            plugins={[autoplay.current]}
-            onMouseLeave={() => autoplay.current.play()}
-            className="w-full"
-          >
-            <CarouselContent>
-              {awards.map((award) => (
-                <CarouselItem
-                  key={award.year}
-                  className="md:basis-1/2 lg:basis-1/3"
-                >
-                  <article className="group h-full bg-card border border-border/50 rounded-3xl p-6 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                    <div className="relative aspect-square rounded-2xl bg-muted/40 overflow-hidden mb-5 flex items-center justify-center">
-                      <div className="absolute top-3 right-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary text-primary-foreground rounded-full text-[0.65rem] font-semibold tracking-wider z-10">
-                        <Sparkles className="w-2.5 h-2.5" />
-                        {award.highlight}
-                      </div>
-                      <img
-                        src={award.image}
-                        alt={`Premio ${award.year}`}
-                        className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <div className="flex items-baseline gap-3">
-                        <span className="font-display text-4xl font-semibold text-primary leading-none">
-                          {award.year}
-                        </span>
-                        <div className="h-px flex-1 bg-border" />
-                      </div>
-                      <h3 className="font-display text-xl font-medium text-foreground">
-                        {award.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed text-pretty">
-                        {award.description}
-                      </p>
-                    </div>
-                  </article>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {awards.map((award) => (
+              <article
+                key={award.year}
+                className="group h-full bg-card border border-border/50 rounded-3xl p-4 md:p-6 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all duration-300 flex flex-col"
+              >
+                <div className="relative aspect-square rounded-2xl bg-muted/40 overflow-hidden mb-5 flex items-center justify-center">
+                  <div className="absolute top-3 right-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary text-primary-foreground rounded-full text-[0.65rem] font-semibold tracking-wider z-10">
+                    <Sparkles className="w-2.5 h-2.5" />
+                    {award.highlight}
+                  </div>
+                  <img
+                    src={award.image}
+                    alt={`Premio ${award.year}`}
+                    className="w-full h-full object-contain p-4 md:p-6 group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-display text-3xl md:text-4xl font-semibold text-primary leading-none">
+                      {award.year}
+                    </span>
+                    <div className="h-px flex-1 bg-border" />
+                  </div>
+                  <h3 className="font-display text-lg md:text-xl font-medium text-foreground">
+                    {award.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed text-pretty">
+                    {award.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
