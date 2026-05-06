@@ -22,7 +22,7 @@ const InfoSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="bg-card border border-border/50 rounded-3xl p-5 sm:p-6 flex flex-col justify-center gap-2.5 shadow-soft">
               <Button asChild className="w-full" size="sm">
-                <a href="https://yecla33.com/carta-vegana-vegetariana/" target="_blank" rel="noopener noreferrer">Recoger en la tienda -30%</a>
+                <a href="https://yecla33.com/productos/burritos-mejicanos-proteicos/" target="_blank" rel="noopener noreferrer">Recoger en la tienda -30%</a>
               </Button>
               <Button asChild className="w-full bg-[hsl(var(--yecla-brown))] text-primary-foreground hover:bg-[hsl(var(--yecla-brown))]/90" size="sm">
                 <a href="https://yecla33.com/productos/hamburguesas-vegetarianas/" target="_blank" rel="noopener noreferrer">Pedir a domicilio</a>
