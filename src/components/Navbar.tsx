@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import AllergensDialog from "@/components/AllergensDialog";
+import NutritionDialog from "@/components/NutritionDialog";
 
 type NavLink = {
   label: string;
   href?: string;
   active?: boolean;
   external?: boolean;
-  type?: "allergens";
+  type?: "allergens" | "nutrition";
 };
 
 const Navbar = () => {
@@ -25,7 +26,7 @@ const Navbar = () => {
     { label: "Inicio", href: "#", active: true },
     { label: "Nosotros", href: "#nosotros" },
     { label: "Carta", href: "#menu" },
-    { label: "Valores nutricionales", href: "#valores-nutricionales" },
+    { label: "Valores nutricionales", type: "nutrition" },
     { label: "Alérgenos", type: "allergens" },
     { label: "Contacto", href: "#contacto" },
   ];
@@ -54,6 +55,15 @@ const Navbar = () => {
         </AllergensDialog>
       );
     }
+    if (link.type === "nutrition") {
+      return (
+        <NutritionDialog key={link.label}>
+          <button type="button" className={linkClass(link.active)}>
+            {link.label}
+          </button>
+        </NutritionDialog>
+      );
+    }
     return (
       <a
         key={link.label}
@@ -78,6 +88,19 @@ const Navbar = () => {
             {link.label}
           </button>
         </AllergensDialog>
+      );
+    }
+    if (link.type === "nutrition") {
+      return (
+        <NutritionDialog key={link.label}>
+          <button
+            type="button"
+            className={mobileLinkClass(link.active)}
+            onClick={() => setIsOpen(false)}
+          >
+            {link.label}
+          </button>
+        </NutritionDialog>
       );
     }
     return (

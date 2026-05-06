@@ -106,17 +106,6 @@ const BurritosMenu = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {product.description}
                 </p>
-                <div className="mt-auto pt-4 border-t border-border/50">
-                  <p className="text-xs font-semibold tracking-[0.15em] uppercase text-primary mb-2">
-                    Valores nutricionales
-                  </p>
-                  <ul className="text-muted-foreground text-sm leading-relaxed space-y-1">
-                    <li><span className="font-medium text-foreground">Calorías:</span> {product.nutrition.calorias}</li>
-                    <li><span className="font-medium text-foreground">Proteínas:</span> {product.nutrition.proteinas}</li>
-                    <li><span className="font-medium text-foreground">Carbohidratos:</span> {product.nutrition.carbohidratos}</li>
-                    <li><span className="font-medium text-foreground">Grasas:</span> {product.nutrition.grasas}</li>
-                  </ul>
-                </div>
               </div>
             </article>
           ))}
