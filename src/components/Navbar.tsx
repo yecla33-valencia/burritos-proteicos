@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import AllergensDialog from "@/components/AllergensDialog";
+
+type NavLink = {
+  label: string;
+  href?: string;
+  active?: boolean;
+  external?: boolean;
+  type?: "allergens";
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,14 +21,77 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const links = [
+  const links: NavLink[] = [
     { label: "Inicio", href: "#", active: true },
-    { label: "Nosotros", href: "#nosotros", active: false },
-    { label: "Carta", href: "#menu", active: false },
-    { label: "Valores nutricionales", href: "#valores-nutricionales", active: false },
-    { label: "Alérgenos", href: "/carta-alergenos.pdf", active: false, external: true },
-    { label: "Contacto", href: "#contacto", active: false },
+    { label: "Nosotros", href: "#nosotros" },
+    { label: "Carta", href: "#menu" },
+    { label: "Valores nutricionales", href: "#valores-nutricionales" },
+    { label: "Alérgenos", type: "allergens" },
+    { label: "Contacto", href: "#contacto" },
   ];
+
+  const linkClass = (active?: boolean) =>
+    `relative text-base lg:text-[1.3125rem] font-medium tracking-tight px-4 lg:px-5 py-2 lg:py-2.5 rounded-full transition-all duration-300 ${
+      active
+        ? "bg-white/20 text-white"
+        : "text-white/85 hover:text-white hover:bg-white/10"
+    }`;
+
+  const mobileLinkClass = (active?: boolean) =>
+    `block w-full text-left py-3 px-4 rounded-xl font-medium transition-colors ${
+      active
+        ? "bg-white/20 text-white"
+        : "text-white/85 hover:text-white hover:bg-white/10"
+    }`;
+
+  const renderDesktopLink = (link: NavLink) => {
+    if (link.type === "allergens") {
+      return (
+        <AllergensDialog key={link.label}>
+          <button type="button" className={linkClass(link.active)}>
+            {link.label}
+          </button>
+        </AllergensDialog>
+      );
+    }
+    return (
+      <a
+        key={link.label}
+        href={link.href}
+        {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        className={linkClass(link.active)}
+      >
+        {link.label}
+      </a>
+    );
+  };
+
+  const renderMobileLink = (link: NavLink) => {
+    if (link.type === "allergens") {
+      return (
+        <AllergensDialog key={link.label}>
+          <button
+            type="button"
+            className={mobileLinkClass(link.active)}
+            onClick={() => setIsOpen(false)}
+          >
+            {link.label}
+          </button>
+        </AllergensDialog>
+      );
+    }
+    return (
+      <a
+        key={link.label}
+        href={link.href}
+        {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        className={mobileLinkClass(link.active)}
+        onClick={() => setIsOpen(false)}
+      >
+        {link.label}
+      </a>
+    );
+  };
 
   return (
     <nav
@@ -38,20 +110,7 @@ const Navbar = () => {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center justify-center gap-2 lg:gap-3">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className={`relative text-base lg:text-[1.3125rem] font-medium tracking-tight px-4 lg:px-5 py-2 lg:py-2.5 rounded-full transition-all duration-300 ${
-                link.active
-                  ? "bg-white/20 text-white"
-                  : "text-white/85 hover:text-white hover:bg-white/10"
-              }`}
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map(renderDesktopLink)}
         </div>
         <div className="hidden md:block" />
 
@@ -68,21 +127,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-[hsl(var(--navbar))] border-t border-white/15 px-4 py-3 animate-fade-in">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className={`block py-3 px-4 rounded-xl font-medium transition-colors ${
-                link.active
-                  ? "bg-white/20 text-white"
-                  : "text-white/85 hover:text-white hover:bg-white/10"
-              }`}
-              onClick={() => setIsOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map(renderMobileLink)}
         </div>
       )}
     </nav>
