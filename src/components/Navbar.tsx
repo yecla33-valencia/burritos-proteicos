@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import AllergensDialog from "@/components/AllergensDialog";
+import NutritionDialog from "@/components/NutritionDialog";
 
 type NavLink = {
   label: string;
   href?: string;
   active?: boolean;
   external?: boolean;
-  type?: "allergens";
+  type?: "allergens" | "nutrition";
 };
 
 const Navbar = () => {
