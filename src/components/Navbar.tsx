@@ -55,6 +55,15 @@ const Navbar = () => {
         </AllergensDialog>
       );
     }
+    if (link.type === "nutrition") {
+      return (
+        <NutritionDialog key={link.label}>
+          <button type="button" className={linkClass(link.active)}>
+            {link.label}
+          </button>
+        </NutritionDialog>
+      );
+    }
     return (
       <a
         key={link.label}
