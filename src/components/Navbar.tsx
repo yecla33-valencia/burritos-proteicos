@@ -90,6 +90,19 @@ const Navbar = () => {
         </AllergensDialog>
       );
     }
+    if (link.type === "nutrition") {
+      return (
+        <NutritionDialog key={link.label}>
+          <button
+            type="button"
+            className={mobileLinkClass(link.active)}
+            onClick={() => setIsOpen(false)}
+          >
+            {link.label}
+          </button>
+        </NutritionDialog>
+      );
+    }
     return (
       <a
         key={link.label}
