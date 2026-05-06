@@ -25,7 +25,7 @@ const InfoSection = () => {
                 <a href="https://yecla33.com/productos/burritos-mejicanos-proteicos/" target="_blank" rel="noopener noreferrer">Recoger en la tienda -30%</a>
               </Button>
               <Button asChild className="w-full bg-[hsl(var(--yecla-brown))] text-primary-foreground hover:bg-[hsl(var(--yecla-brown))]/90" size="sm">
-                <a href="https://yecla33.com/productos/hamburguesas-vegetarianas/" target="_blank" rel="noopener noreferrer">Pedir a domicilio</a>
+                <a href="https://yecla33.com/productos/burritos-mejicanos-proteicos/" target="_blank" rel="noopener noreferrer">Pedir a domicilio</a>
               </Button>
             </div>
 
