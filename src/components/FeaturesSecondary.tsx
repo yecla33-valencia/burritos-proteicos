@@ -1,13 +1,4 @@
-import { useRef } from "react";
 import { Trophy, Sparkles } from "lucide-react";
-import Autoplay from "embla-carousel-autoplay";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import award2018 from "@/assets/award-2018.jpg";
 import award2019 from "@/assets/award-2019.jpg";
 import award2021 from "@/assets/award-2021.jpg";
