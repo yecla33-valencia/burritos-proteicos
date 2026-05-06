@@ -31,7 +31,7 @@ const InfoSection = () => {
 
             <div className="bg-card border border-border/50 rounded-3xl p-8 flex flex-col justify-center items-center gap-3 shadow-soft">
               <Button asChild className="w-2/3 bg-[#FF8000] hover:bg-[#FF8000]/90 text-white">
-                <a href="https://www.just-eat.es/restaurants-yecla33vegano/menu" target="_blank" rel="noopener noreferrer">Just Eat</a>
+                <a href="https://www.just-eat.es/restaurants-burritos-texmex-valencia/menu" target="_blank" rel="noopener noreferrer">Just Eat</a>
               </Button>
               <Button asChild className="w-2/3 bg-black hover:bg-black/90 text-white">
                 <a href="https://www.ubereats.com/es/store/vegetarian-%26-vegan-burgers/AtmvyTYeV6-pyOgA5kCtew?diningMode=DELIVERY&ps=1&sc=SEARCH_SUGGESTION" target="_blank" rel="noopener noreferrer">Uber Eats</a>
