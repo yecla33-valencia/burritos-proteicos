@@ -26,7 +26,7 @@ const Navbar = () => {
     { label: "Inicio", href: "#", active: true },
     { label: "Nosotros", href: "#nosotros" },
     { label: "Carta", href: "#menu" },
-    { label: "Valores nutricionales", href: "#valores-nutricionales" },
+    { label: "Valores nutricionales", type: "nutrition" },
     { label: "Alérgenos", type: "allergens" },
     { label: "Contacto", href: "#contacto" },
   ];
