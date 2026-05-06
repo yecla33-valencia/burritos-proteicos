@@ -37,7 +37,7 @@ const InfoSection = () => {
                 <a href="https://www.ubereats.com/es/store/burritos-texmex/nAQujPDYR_u8vvicsoReWg?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkF2LiUyME1hcmUlMjBOb3N0cnVtJTJDJTIwNDAlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJDaElKdDdoSlg5aEhZQTBSRVdqNlc2VHlRaE0lMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIyZ29vZ2xlX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBMzkuNDg3NjM5NCUyQyUyMmxvbmdpdHVkZSUyMiUzQS0wLjMyNTQ4NDUlN0Q%3D&ps=1" target="_blank" rel="noopener noreferrer">Uber Eats</a>
               </Button>
               <Button asChild className="w-2/3 bg-[#FFC244] hover:bg-[#FFC244]/90 text-black">
-                <a href="https://glovoapp.com/es/es/valencia/stores/vegetarian-artichoke-burger-valencia" target="_blank" rel="noopener noreferrer">Glovo</a>
+                <a href="https://glovoapp.com/es/es/valencia/stores/texmex-by-yecla-33" target="_blank" rel="noopener noreferrer">Glovo</a>
               </Button>
             </div>
           </div>
