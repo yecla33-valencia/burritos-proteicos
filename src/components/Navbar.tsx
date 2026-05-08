@@ -14,6 +14,8 @@ type NavLink = {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [allergensOpen, setAllergensOpen] = useState(false);
+  const [nutritionOpen, setNutritionOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
