@@ -165,6 +165,9 @@ const Navbar = () => {
           {links.map(renderMobileLink)}
         </div>
       )}
+
+      <AllergensDialog open={allergensOpen} onOpenChange={setAllergensOpen} />
+      <NutritionDialog open={nutritionOpen} onOpenChange={setNutritionOpen} />
     </nav>
   );
 };
