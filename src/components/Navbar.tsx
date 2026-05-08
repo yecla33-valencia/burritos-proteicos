@@ -14,6 +14,8 @@ type NavLink = {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [allergensOpen, setAllergensOpen] = useState(false);
+  const [nutritionOpen, setNutritionOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -48,20 +50,26 @@ const Navbar = () => {
   const renderDesktopLink = (link: NavLink) => {
     if (link.type === "allergens") {
       return (
-        <AllergensDialog key={link.label}>
-          <button type="button" className={linkClass(link.active)}>
-            {link.label}
-          </button>
-        </AllergensDialog>
+        <button
+          key={link.label}
+          type="button"
+          className={linkClass(link.active)}
+          onClick={() => setAllergensOpen(true)}
+        >
+          {link.label}
+        </button>
       );
     }
     if (link.type === "nutrition") {
       return (
-        <NutritionDialog key={link.label}>
-          <button type="button" className={linkClass(link.active)}>
-            {link.label}
-          </button>
-        </NutritionDialog>
+        <button
+          key={link.label}
+          type="button"
+          className={linkClass(link.active)}
+          onClick={() => setNutritionOpen(true)}
+        >
+          {link.label}
+        </button>
       );
     }
     return (
@@ -79,28 +87,32 @@ const Navbar = () => {
   const renderMobileLink = (link: NavLink) => {
     if (link.type === "allergens") {
       return (
-        <AllergensDialog key={link.label}>
-          <button
-            type="button"
-            className={mobileLinkClass(link.active)}
-            onClick={() => setIsOpen(false)}
-          >
-            {link.label}
-          </button>
-        </AllergensDialog>
+        <button
+          key={link.label}
+          type="button"
+          className={mobileLinkClass(link.active)}
+          onClick={() => {
+            setIsOpen(false);
+            setAllergensOpen(true);
+          }}
+        >
+          {link.label}
+        </button>
       );
     }
     if (link.type === "nutrition") {
       return (
-        <NutritionDialog key={link.label}>
-          <button
-            type="button"
-            className={mobileLinkClass(link.active)}
-            onClick={() => setIsOpen(false)}
-          >
-            {link.label}
-          </button>
-        </NutritionDialog>
+        <button
+          key={link.label}
+          type="button"
+          className={mobileLinkClass(link.active)}
+          onClick={() => {
+            setIsOpen(false);
+            setNutritionOpen(true);
+          }}
+        >
+          {link.label}
+        </button>
       );
     }
     return (
@@ -153,6 +165,9 @@ const Navbar = () => {
           {links.map(renderMobileLink)}
         </div>
       )}
+
+      <AllergensDialog open={allergensOpen} onOpenChange={setAllergensOpen} />
+      <NutritionDialog open={nutritionOpen} onOpenChange={setNutritionOpen} />
     </nav>
   );
 };

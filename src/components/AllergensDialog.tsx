@@ -261,14 +261,16 @@ const sections: { title: string; rows: Row[] }[] = [
 ];
 
 interface AllergensDialogProps {
-  children: ReactNode;
+  children?: ReactNode;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
-const AllergensDialog = ({ children }: AllergensDialogProps) => {
+const AllergensDialog = ({ children, open, onOpenChange }: AllergensDialogProps) => {
   return (
-    <Dialog>
-      <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto p-0">
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      {children ? <DialogTrigger asChild>{children}</DialogTrigger> : null}
+      <DialogContent className="w-[calc(100vw-1.5rem)] max-w-5xl max-h-[90vh] overflow-y-auto p-0 rounded-2xl">
         <DialogHeader className="px-6 pt-6 pb-4 border-b border-border/50 sticky top-0 bg-background z-10">
           <DialogTitle className="font-display text-2xl md:text-3xl font-medium tracking-tight">
             Carta de alérgenos
