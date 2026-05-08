@@ -46,11 +46,19 @@ const burritos = [
   },
 ];
 
-const NutritionDialog = ({ children }: { children: ReactNode }) => {
+const NutritionDialog = ({
+  children,
+  open,
+  onOpenChange,
+}: {
+  children?: ReactNode;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}) => {
   return (
-    <Dialog>
-      <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto bg-background">
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      {children ? <DialogTrigger asChild>{children}</DialogTrigger> : null}
+      <DialogContent className="w-[calc(100vw-1.5rem)] max-w-3xl max-h-[85vh] overflow-y-auto bg-background rounded-2xl">
         <DialogHeader>
           <span className="inline-block w-fit px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-semibold tracking-[0.2em] uppercase">
             Información nutricional
